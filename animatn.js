@@ -15,7 +15,7 @@ function mobile_view()
     document.querySelector(".gear1").classList.remove("gear1_d");
     document.querySelector(".gear2").classList.remove("gear2_d");
     document.querySelector(".brand").classList.remove("brand_d");
-    brand_lenght=300;
+    brand_lenght=400;
 }
 
 function desktop_view()
