@@ -1,0 +1,95 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+
+header, section, footer, aside, nav, article, hgroup {
+    display:block;
+}
+
+
+body {
+    background: black;
+}
+
+div.main_body_div 
+{
+    position: relative; 
+    background-color:black; 
+    height: 5000px; 
+    width: 98%; 
+    margin: 1%;
+    margin-top: 0%;
+    overflow-x: scroll;
+}
+
+div.main_menu{
+    position: fixed;
+    visibility: visible;
+    z-index: 2;
+    background-color: #7f7f7f; 
+    height: 40px;
+    top:5px;
+    width: inherit;
+}
+
+div.gear_logo
+{
+    position: fixed;
+    top: 60px;
+    visibility: hidden;
+}
+
+div.gear_logo > .gear1_d
+{
+    height:200px; 
+    width:200px;
+    left: 0px; 
+    transform: rotate(0deg);
+}
+
+div.gear_logo > .gear2_d
+{
+    height:120px;
+    position: absolute;
+    width:120px;
+    left: 185px;
+    top:1px;
+    transform: rotate(0deg);
+}
+
+div.gear_logo > .gear1_m
+{
+    height:100px; 
+    width:100px;
+    left: 0px; 
+    transform: rotate(0deg);
+}
+
+div.gear_logo > .gear2_m
+{
+    height:20px;
+    width:20px;
+    position: absolute;
+    left: 85px;
+    top:1px;
+    transform: rotate(0deg);
+}
+
+div.gear_logo > .brand_d
+{
+    font-size: 70px;   
+    left: 325px;
+    font-family:fantasy;
+    color:black;
+    top: 45px;
+}
+
+div.gear_logo > .brand_m
+{
+    font-size: 30px;
+    left: 125px;
+    font-family:fantasy;
+    color:black;
+    top: 30px;
+}

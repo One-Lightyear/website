@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Prasurjya Rohan Saikia">
+
+    <title>index</title>
+
+    <script src="animatn.js"></script>
+    <link rel="stylesheet" type="text/css" href="index_styling.css"/>
+    
+
+    <style type="text/css">
+
+       div.menu2{
+           background-color: #fff;
+           visibility: hidden;
+       }
+
+    </style>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            var element = document.querySelector(".main_menu");
+            console.log(element.classList);
+            element.classList.toggle("menu2");
+        }
+
+    </script>
+</head>
+
+
+<body onload="fx_body_load()">
+    
+<div class="main_body_div">
+          
+    <div id="divn" class="main_menu menu2"></div>
+    
+    <div class="gear_logo">
+        
+        <img class="gear1 gear1_m gear1_d" src="gear.png"></img>
+        <img class="gear2 gear2_m gear2_d" src="gear2.png"></img>
+        
+        <brand class="brand brand_d brand_m">
+            <b1 id="ok" style="background-color: yellow;">Custom </b1> 
+            <b2 style="background-color:lightblue;">&nbsp;Culture</b2>
+        </brand>
+
+    </div>
+
+    <button style="position: fixed;top: 10%;" onclick="myFunction()">Try it</button>
+
+</div>
+
+</body>
+</html>
