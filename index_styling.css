@@ -38,6 +38,7 @@ div.gear_logo
     position: fixed;
     top: 60px;
     visibility: hidden;
+    left:10%
 }
 
 div.gear_logo > .gear1_d

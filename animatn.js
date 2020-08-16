@@ -86,7 +86,7 @@ function fx_body_load()
     console.log("Hello world");
     (wind_size_width<600)?mobile_view():desktop_view();
     
-    document.querySelector(".gear_logo").style.left=`${(wind_size_width/2)-(brand_lenght/2)}px`;
+    //document.querySelector(".gear_logo").style.left=`${(wind_size_width/2)-(brand_lenght/2)}px`;
     document.querySelector(".gear_logo").style.width=`${brand_lenght}px`
     
     document.querySelector(".gear_logo").style.visibility="visible";
