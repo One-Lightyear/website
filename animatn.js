@@ -1,4 +1,4 @@
-//window.addEventListener("scroll", myAnimation1);
+window.addEventListener("scroll", myAnimation1);
 window.addEventListener("resize", myAnimation2);
 window.onload=load_page_event_handler();
 
@@ -67,7 +67,7 @@ function myAnimation1()
     }
 
     
-    if(window.scrollY>2000 && window.scrollY>scroll_val && margn>=-280)
+    if(window.scrollY>1000 && window.scrollY>scroll_val && margn>=-280)
     {
         margn-=20;
         document.querySelector(".gear_logo").style.marginTop=`${margn}px`;
@@ -81,6 +81,7 @@ function myAnimation1()
     }
     
     scroll_val=window.scrollY;
+    
 }
 
 
