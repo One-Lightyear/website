@@ -14,24 +14,15 @@ body {
 
 div.main_body_div 
 {
-    position: relative; 
-    background-color:black; 
-    height: 5000px; 
-    width: 98%; 
-    margin: 1%;
+    position: absolute; 
+    background-color:teal; 
+    height: 2000px; 
+    width: 90%;
+    margin-left:5%;
     margin-top: 0%;
-    overflow-x: scroll;
+    
 }
 
-div.main_menu{
-    position: fixed;
-    visibility: visible;
-    z-index: 2;
-    background-color: #7f7f7f; 
-    height: 40px;
-    top:5px;
-    width: inherit;
-}
 
 div.gear_logo
 {
