@@ -11,6 +11,7 @@ var brand_lenght;
 
 function mobile_view()
 {
+    document.querySelector(".main_body_div").classList.remove("main_body_div_desktop");
     console.log("Mobile view");
     document.querySelector(".gear1").classList.remove("gear1_d");
     document.querySelector(".gear2").classList.remove("gear2_d");
@@ -20,6 +21,7 @@ function mobile_view()
 
 function desktop_view()
 {
+    document.querySelector(".main_body_div").classList.remove("main_body_div_mobile");
     console.log("Desktop view");
     document.querySelector(".gear1").classList.remove("gear1_m");
     document.querySelector(".gear2").classList.remove("gear2_m");

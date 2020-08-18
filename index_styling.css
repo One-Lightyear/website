@@ -12,15 +12,25 @@ body {
     background: black;
 }
 
-div.main_body_div 
+div.main_body_div
 {
     position: absolute; 
     background-color:teal; 
-    height: 1000px; 
+    height: 1000px;
+}
+
+div.main_body_div_desktop 
+{ 
     width: 90%;
     margin-left:5%;
     margin-top: 0%;
     
+}
+
+
+div.main_body_div_mobile 
+{ 
+    width: 100%;
 }
 
 
@@ -29,7 +39,7 @@ div.gear_logo
     position: fixed;
     top: 60px;
     visibility: hidden;
-    left:10%
+    left:25%
 }
 
 div.gear_logo > .gear1_d
