@@ -69,20 +69,17 @@ function myAnimation1()
     
     if(window.scrollY>1000 && window.scrollY>scroll_val && margn>=-260)
     {
-        margn-=20;
-        document.querySelector(".gear_logo").style.top=`${margn}px`;
+        document.querySelector(".gear_logo").style.top=`${margn-=40}px`
+
+        if(window.scrollY>1500 && margn!=-260) document.querySelector(".gear_logo").style.top=`${-260}px`;
         //document.querySelector(".gear_logo").style.position="static";
     }
     else if(window.scrollY<scroll_val && window.scrollY<=1000 && margn<=60)
     {
-        margn+=60;
-        (!(margn>60))?document.querySelector(".gear_logo").style.top=`${margn}px`:document.querySelector(".gear_logo").style.top=`${60}px`;
-        //document.querySelector(".gear_logo").style.position="fixed";
-    }
+        (!(margn>60))?document.querySelector(".gear_logo").style.top=`${margn+=60}px`:document.querySelector(".gear_logo").style.top=`${60}px`;
 
-    if(scroll_val==0 && margn!=60)
-    {
-        document.querySelector(".gear_logo").style.top=`${60}px`;
+        if(window.scrollY==0 && margn!=0) document.querySelector(".gear_logo").style.top=`${60}px`;
+        //document.querySelector(".gear_logo").style.position="fixed";
     }
     
     scroll_val=window.scrollY;
