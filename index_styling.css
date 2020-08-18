@@ -33,7 +33,6 @@ div.gear_logo
     position: fixed;
     top: 60px;
     visibility: hidden;
-    background-color: tomato;
     left:25%;
 }
 
