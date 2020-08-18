@@ -16,7 +16,7 @@ div.main_body_div
 {
     position: absolute; 
     background-color:teal; 
-    height: 1000px;
+    height: 2000px;
 }
 
 div.main_body_div_desktop 
@@ -39,7 +39,18 @@ div.gear_logo
     position: fixed;
     top: 60px;
     visibility: hidden;
-    left:25%
+    left:25%;
+    background-color: tomato;
+}
+
+div.gear_logo_d
+{
+    height: 200px;
+}
+
+div.gear_logo_m
+{
+    height: 100px;
 }
 
 div.gear_logo > .gear1_d
@@ -78,20 +89,22 @@ div.gear_logo > .gear2_m
     transform: rotate(0deg);
 }
 
-div.gear_logo > .brand_d
+div.gear_logo > .brand
 {
-    font-size: 70px;   
-    left: 325px;
     font-family:fantasy;
     color:black;
-    top: 45px;
+}
+
+div.gear_logo > .brand_d
+{
+    font-size: 60px;
+    margin-left:310px;
+    margin-top: -135px 
 }
 
 div.gear_logo > .brand_m
 {
-    font-size: 30px;
-    left: 125px;
-    font-family:fantasy;
-    color:black;
-    top: 30px;
+    font-size: 20px;
+    margin-left:110px;
+    margin-top: -65px
 }
