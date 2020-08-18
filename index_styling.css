@@ -3,10 +3,6 @@
     padding:0px;
 }
 
-header, section, footer, aside, nav, article, hgroup {
-    display:block;
-}
-
 
 body {
     background: black;
@@ -23,8 +19,6 @@ div.main_body_div_desktop
 { 
     width: 90%;
     margin-left:5%;
-    margin-top: 0%;
-    
 }
 
 
@@ -39,6 +33,7 @@ div.gear_logo
     position: fixed;
     top: 60px;
     visibility: hidden;
+    background-color: tomato;
     left:25%;
 }
 

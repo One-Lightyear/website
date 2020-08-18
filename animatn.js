@@ -67,17 +67,22 @@ function myAnimation1()
     }
 
     
-    if(window.scrollY>1000 && window.scrollY>scroll_val && margn>=-280)
+    if(window.scrollY>1000 && window.scrollY>scroll_val && margn>=-260)
     {
         margn-=20;
-        document.querySelector(".gear_logo").style.marginTop=`${margn}px`;
+        document.querySelector(".gear_logo").style.top=`${margn}px`;
         //document.querySelector(".gear_logo").style.position="static";
     }
-    else if(window.scrollY<scroll_val && window.scrollY<=1000 && margn<=40)
+    else if(window.scrollY<scroll_val && window.scrollY<=1000 && margn<=60)
     {
-        margn+=20;
-        document.querySelector(".gear_logo").style.marginTop=`${margn}px`;
+        margn+=60;
+        (!(margn>60))?document.querySelector(".gear_logo").style.top=`${margn}px`:document.querySelector(".gear_logo").style.top=`${60}px`;
         //document.querySelector(".gear_logo").style.position="fixed";
+    }
+
+    if(scroll_val==0 && margn!=60)
+    {
+        document.querySelector(".gear_logo").style.top=`${60}px`;
     }
     
     scroll_val=window.scrollY;
