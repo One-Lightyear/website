@@ -81,7 +81,6 @@ function myAnimation1()
     }
     
     scroll_val=window.scrollY;
-    
 }
 
 
