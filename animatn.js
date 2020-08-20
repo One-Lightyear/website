@@ -89,9 +89,6 @@ function myAnimation1()
             document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
             if(navgn_scroll<=100 && navgn_scroll>20) document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
             else if(navgn_scroll>100) document.querySelector(".navgn_panel").style.width="100%";
-
-            document.getElementById("details").value=scrollY;
-            
         }
         else if(window.scrollY<scroll_val)  //scroll up
         {
@@ -99,8 +96,6 @@ function myAnimation1()
             document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
             if(navgn_scroll>20 && navgn_scroll<=100) document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
             else if(navgn_scroll<20) document.querySelector(".navgn_panel").style.width="20%";
-
-            document.getElementById("details").value=scrollY;
         }
     }
     else
@@ -120,7 +115,7 @@ function fx_body_load()
 
     //alert(wind_size_height+"  "+wind_size_width);
 
-    document.getElementById("details").value=scrollY;
+    // document.getElementById("details").value=scrollY;
 
     if(flag_view=="dv")
     {
@@ -130,4 +125,5 @@ function fx_body_load()
     }
         
     document.querySelector(".gear_logo").style.visibility="visible";
+    document.querySelector(".main_body_div").style.visibility="visible";
 }

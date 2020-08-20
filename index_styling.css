@@ -15,6 +15,7 @@ body {
 
 div.main_body_div
 {
+    visibility: hidden;
     position: absolute; 
     background-color:black; 
     overscroll-behavior: contain;
@@ -38,7 +39,6 @@ div.main_body_div_mobile
 
 div.master_class_logo
 {
-    /* background-color: teal; */
     width:100%;
     position: static;
 }
@@ -56,6 +56,7 @@ div.master_class_logo_m
 div.gear_logo
 {
     position: fixed;
+    z-index: 2;
     top: 80px;
     visibility: hidden;
 }
@@ -126,12 +127,14 @@ div.gear_logo > .brand_m
 
 div.navgn_panel
 {
+    z-index: 1;
     margin:auto;
     width:20%;
     border-radius: 50px;;
     height:50px;
     text-align: center;
     background-color: darkolivegreen;
+    /* opacity: 0.5; */
 }
 
 div.navgn_panel_d
