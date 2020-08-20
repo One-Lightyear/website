@@ -50,10 +50,10 @@ function desktop_view()
     document.querySelector(".navgn_panel").classList.remove("navgn_panel_m");
 }
 
-function timer_handler(){
+function timer_handler(){                                   //mobile_view_logo_animation
     flag_timer=1;
-    document.querySelector(".gear1").style.transform=`rotate(-${rot1_val1_m+=40}deg)`;
-    document.querySelector(".gear2").style.transform=`rotate(${rot1_val2_m+=80}deg)`;
+    document.querySelector(".gear1").style.transform=`rotate(-${rot1_val1_m+=20}deg)`;
+    document.querySelector(".gear2").style.transform=`rotate(${rot1_val2_m+=40}deg)`;
     if(rot1_val1_m>=360) rot1_val1_m=0;
     if(rot1_val2_m>=360) rot1_val2_m=0;
 }
@@ -91,7 +91,6 @@ function myAnimation1()
             else if(navgn_scroll>100) document.querySelector(".navgn_panel").style.width="100%";
 
             document.getElementById("details").value=scrollY;
-            document.getElementById("details2").value=document.querySelector(".navgn_panel").style.width;
             
         }
         else if(window.scrollY<scroll_val)  //scroll up
@@ -102,7 +101,6 @@ function myAnimation1()
             else if(navgn_scroll<20) document.querySelector(".navgn_panel").style.width="20%";
 
             document.getElementById("details").value=scrollY;
-            document.getElementById("details2").value=document.querySelector(".navgn_panel").style.width;
         }
     }
     else
@@ -121,7 +119,7 @@ function fx_body_load()
     (wind_size_width<600)?mobile_view():desktop_view();
 
     //alert(wind_size_height+"  "+wind_size_width);
-    
+
     document.getElementById("details").value=scrollY;
 
     if(flag_view=="dv")
@@ -130,8 +128,6 @@ function fx_body_load()
         else if (scrollY<=90 && scrollY>=20) document.querySelector(".navgn_panel").style.width=`${scrollY}%`;
         else if(scrollY>90) document.querySelector(".navgn_panel").style.width=`90%`;
     }
-    
-    document.getElementById("details2").value=document.querySelector(".navgn_panel").style.width;
         
     document.querySelector(".gear_logo").style.visibility="visible";
 }
