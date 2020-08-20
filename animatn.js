@@ -4,10 +4,10 @@ window.onload=load_page_event_handler();
 
 var wind_size_height=window.innerHeight;
 var wind_size_width=window.innerWidth;
-var val=30;
 var scroll_val;
-var margn=90;
-var brand_lenght;
+var rot1_val;
+var rot2_val;
+var navgn_width=20;
 
 function mobile_view()
 {
@@ -17,7 +17,6 @@ function mobile_view()
     document.querySelector(".gear2").classList.remove("gear2_d");
     document.querySelector(".brand").classList.remove("brand_d");
     document.querySelector(".gear_logo").classList.remove("gear_logo_d");
-    brand_lenght=400;
 }
 
 function desktop_view()
@@ -28,7 +27,6 @@ function desktop_view()
     document.querySelector(".gear2").classList.remove("gear2_m");
     document.querySelector(".brand").classList.remove("brand_m");
     document.querySelector(".gear_logo").classList.remove("gear_logo_m");
-    brand_lenght=662;
 }
 
 
@@ -42,44 +40,28 @@ function myAnimation2()
 {    
     wind_size_height=window.innerHeight;
     wind_size_width=window.innerWidth;
-    //window.location.reload();   
+    location.reload();   
 }
 
 
 function myAnimation1()
 {    
-    val=(window.scrollY/4)+30;
-    var rot1_val=(window.scrollY/10);
-    var rot2_val=(window.scrollY/5);
-    //margn=(window.scrollY/20);
-    
+    rot1_val=(window.scrollY/6);
+    rot2_val=(window.scrollY/3);
 
-    if(window.scrollY>scroll_val)
+    if(window.scrollY>scroll_val)   //scroll down
     {
-        document.querySelector(".gear1").style.transform="rotate(-"+rot1_val+"deg)";
-        document.querySelector(".gear2").style.transform="rotate("+rot2_val+"deg)";
+        
+        document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
+        document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
+        if(navgn_width<=90) document.querySelector(".navgn_panel").style.width=`${navgn_width+=5}%`;
         
     }
-    else if(window.scrollY<scroll_val)
+    else if(window.scrollY<scroll_val)  //scroll up
     {
-        document.querySelector(".gear1").style.transform="rotate(-"+rot1_val+"deg)";
-        document.querySelector(".gear2").style.transform="rotate("+rot2_val+"deg)";
-    }
-
-    
-    if(window.scrollY>1000 && window.scrollY>scroll_val && margn>=-260)
-    {
-        document.querySelector(".gear_logo").style.top=`${margn-=40}px`
-
-        if(window.scrollY>1500 && margn!=-260) document.querySelector(".gear_logo").style.top=`${-260}px`;
-        //document.querySelector(".gear_logo").style.position="static";
-    }
-    else if(window.scrollY<scroll_val && window.scrollY<=1000 && margn<=60)
-    {
-        (!(margn>60))?document.querySelector(".gear_logo").style.top=`${margn+=60}px`:document.querySelector(".gear_logo").style.top=`${60}px`;
-
-        if(window.scrollY==0 && margn!=0) document.querySelector(".gear_logo").style.top=`${60}px`;
-        //document.querySelector(".gear_logo").style.position="fixed";
+        document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
+        document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
+        if(navgn_width>20) document.querySelector(".navgn_panel").style.width=`${navgn_width-=5}%`;
     }
     
     scroll_val=window.scrollY;
@@ -91,10 +73,8 @@ function fx_body_load()
 {
     console.log("Hello world");
     //alert(wind_size_height+"  "+wind_size_width);
+    
     (wind_size_width<600)?mobile_view():desktop_view();
-    
-    //document.querySelector(".gear_logo").style.left=`${(wind_size_width/2)-(brand_lenght/2)}px`;
-    //document.querySelector(".gear_logo").style.width=`${brand_lenght}px`
-    
+        
     document.querySelector(".gear_logo").style.visibility="visible";
 }

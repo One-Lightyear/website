@@ -11,7 +11,7 @@ body {
 div.main_body_div
 {
     position: absolute; 
-    background-color:teal; 
+    background-color:black; 
     height: 2000px;
 }
 
@@ -27,31 +27,37 @@ div.main_body_div_mobile
     width: 100%;
 }
 
+div.master_class_logo
+{
+    /* background-color: teal; */
+    width:100%;
+    height:350px;
+    position: static;
+}
 
 div.gear_logo
 {
     position: fixed;
-    top: 60px;
+    top: 80px;
     visibility: hidden;
-    left:25%;
 }
 
 div.gear_logo_d
 {
     height: 200px;
+    left:25%;
 }
 
 div.gear_logo_m
 {
     height: 100px;
+    left:20%;
 }
 
 div.gear_logo > .gear1_d
 {
     height:200px; 
     width:200px;
-    left: 0px; 
-    transform: rotate(0deg);
 }
 
 div.gear_logo > .gear2_d
@@ -61,16 +67,14 @@ div.gear_logo > .gear2_d
     width:120px;
     left: 185px;
     top:1px;
-    transform: rotate(0deg);
 }
 
 div.gear_logo > .gear1_m
 {
     height:100px; 
     width:100px;
-    left: 0px; 
-    transform: rotate(0deg);
 }
+
 
 div.gear_logo > .gear2_m
 {
@@ -100,4 +104,15 @@ div.gear_logo > .brand_m
     font-size: 20px;
     margin-left:110px;
     margin-top: -65px
+}
+
+div.navgn_panel
+{
+    margin:auto;
+    width:20%;
+    border-radius: 50px;;
+    height:50px;
+    background-color: darkolivegreen;
+    position:sticky;
+    top:10px
 }
