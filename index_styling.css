@@ -34,10 +34,19 @@ div.main_body_div_mobile
 
 div.master_class_logo
 {
-    /* background-color: teal; */
+    background-color: teal;
     width:100%;
-    height:350px;
     position: static;
+}
+
+div.master_class_logo_d
+{
+    height:350px;
+}
+
+div.master_class_logo_m
+{
+    height:250px;
 }
 
 div.gear_logo

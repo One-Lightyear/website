@@ -19,6 +19,7 @@ function mobile_view()
     document.querySelector(".gear2").classList.remove("gear2_d");
     document.querySelector(".brand").classList.remove("brand_d");
     document.querySelector(".gear_logo").classList.remove("gear_logo_d");
+    document.querySelector(".master_class_logo").classList.remove("master_class_logo_d");
 }
 
 function desktop_view()
@@ -30,6 +31,7 @@ function desktop_view()
     document.querySelector(".gear2").classList.remove("gear2_m");
     document.querySelector(".brand").classList.remove("brand_m");
     document.querySelector(".gear_logo").classList.remove("gear_logo_m");
+    document.querySelector(".master_class_logo").classList.remove("master_class_logo_m");
 }
 
 
@@ -57,8 +59,8 @@ function myAnimation1()
         
         document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
         document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
-        if(scrollY<=100 && scrollY>20) document.querySelector(".navgn_panel").style.width=`${scrollY}%`;
-        else if(scrollY>100) document.querySelector(".navgn_panel").style.width="100%";
+        if(scrollY/4<=100 && scrollY/4>20) document.querySelector(".navgn_panel").style.width=`${scrollY/4}%`;
+        else if(scrollY/4>100) document.querySelector(".navgn_panel").style.width="100%";
 
         document.getElementById("details").value=scrollY;
         document.getElementById("details2").value=document.querySelector(".navgn_panel").style.width;
@@ -68,8 +70,8 @@ function myAnimation1()
     {
         document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
         document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
-        if(scrollY>20 && scrollY<=100) document.querySelector(".navgn_panel").style.width=`${scrollY}%`;
-        else if(scrollY<20) document.querySelector(".navgn_panel").style.width="20%";
+        if(scrollY/4>20 && scrollY/4<=100) document.querySelector(".navgn_panel").style.width=`${scrollY/4}%`;
+        else if(scrollY/4<20) document.querySelector(".navgn_panel").style.width="20%";
 
         document.getElementById("details").value=scrollY;
         document.getElementById("details2").value=document.querySelector(".navgn_panel").style.width;
