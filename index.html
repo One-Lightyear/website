@@ -9,7 +9,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="Prasurjya Rohan Saikia">
 
@@ -20,30 +20,23 @@
     
 
     <style type="text/css">
-
-        div.main_menu{
-            position: fixed;
-            visibility: visible;
-            z-index: 2;
-            background-color: #7f7f7f; 
-            height: 40px;
-            top:5px;
-            width: inherit;
-        }
-
-       div.menu2{
-           background-color: #fff;
-           visibility: hidden;
-       }
-
     </style>
 
     <script type="text/javascript">
 
-        function myFunction() {
-            var element = document.querySelector(".main_menu");
-            console.log(element.classList);
-            element.classList.toggle("menu2");
+        var flag=0
+        function scroll_to()
+        {
+            if(flag==0 && scrollY<=400)
+            {
+                flag_sc=1;
+                window.scrollTo( 0,400);
+            }
+            else
+            {
+                flag_sc=0;
+                window.scrollTo( 0,0);
+            }
         }
 
     </script>
@@ -72,14 +65,13 @@
     
     </div>
 
-    <div class="navgn_panel navgn_panel_d navgn_panel_m"></div>
+    <div class="navgn_panel navgn_panel_d navgn_panel_m">
+        <button style="position: static;" onclick="scroll_to()">Click</button>
+    </div>
     
     <!-- <div style="position: sticky; top:10px;">
     <input id="details" type="text" value="hello"></input></br>
     </div> -->
-
-    
-    <button style=" margin-top: 0px;" onclick="myFunction()">Click</button>
 
 </div>
 

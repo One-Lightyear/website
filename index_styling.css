@@ -53,24 +53,26 @@ div.master_class_logo_m
     height:250px;
 }
 
-div.gear_logo
-{
-    position: fixed;
-    z-index: 2;
-    top: 80px;
-    visibility: hidden;
-}
+/* @media only screen and (max-device-width: 1566px) */
+/* { */
+    div.gear_logo
+    {
+        position: fixed;
+        z-index: 2;
+        top: 80px;
+    }
+/* } */
 
 div.gear_logo_d
 {
     height: 200px;
-    left:25%;
+    left:28%;
 }
 
 div.gear_logo_m
 {
     height: 100px;
-    left:20%;
+    left:22%;
 }
 
 div.gear_logo > .gear1_d

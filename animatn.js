@@ -74,34 +74,50 @@ function myAnimation2()
 
 
 function myAnimation1()
-{    
-    rot1_val=(window.scrollY/6);
-    rot2_val=(window.scrollY/3);
+{
+    var scroll_element=window.scrollY;
+    rot1_val=(scroll_element/6);
+    rot2_val=(scroll_element/3);
+    navgn_scroll=scroll_element/4;
 
     if(flag_view=="dv")
     {
-        navgn_scroll=scrollY/4;
         console.log("Desktop_scroll");
-        if(window.scrollY>scroll_val)   //scroll down
-        {
+
+        if(scroll_element>scroll_val)   //scroll down
+        {        
+            document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
+            document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
             
-            document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
-            document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
-            if(navgn_scroll<=100 && navgn_scroll>20) document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
-            else if(navgn_scroll>100) document.querySelector(".navgn_panel").style.width="100%";
+            if(navgn_scroll<=100 && navgn_scroll>20)
+            {
+                document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
+            }
+            else if(navgn_scroll>100)
+            {
+                document.querySelector(".navgn_panel").style.width="100%";
+            }
         }
-        else if(window.scrollY<scroll_val)  //scroll up
+        else if(scroll_element<scroll_val)  //scroll up
         {
             document.querySelector(".gear1").style.transform=`rotate(-${rot1_val}deg)`;
             document.querySelector(".gear2").style.transform=`rotate(${rot2_val}deg)`;
-            if(navgn_scroll>20 && navgn_scroll<=100) document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
-            else if(navgn_scroll<20) document.querySelector(".navgn_panel").style.width="20%";
+            
+            if(navgn_scroll>20 && navgn_scroll<=100)
+            {
+                document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
+            }
+            else if(navgn_scroll<20)
+            {
+              document.querySelector(".navgn_panel").style.width="20%";
+            }
         }
     }
     else
     {
         console.log("mobile_scroll");
     }
+
     scroll_val=window.scrollY;
 }
 
@@ -112,18 +128,18 @@ function fx_body_load()
     console.log("Hello world");
 
     (wind_size_width<600)?mobile_view():desktop_view();
-
-    //alert(wind_size_height+"  "+wind_size_width);
-
-    // document.getElementById("details").value=scrollY;
+    
+    var scroll_element=window.scrollY;
+    navgn_scroll=scroll_element/4;
 
     if(flag_view=="dv")
     {
-        if(scrollY<20) document.querySelector(".navgn_panel").style.width=`20%`;
-        else if (scrollY<=90 && scrollY>=20) document.querySelector(".navgn_panel").style.width=`${scrollY}%`;
-        else if(scrollY>90) document.querySelector(".navgn_panel").style.width=`90%`;
-    }
+        if(navgn_scroll<=20) document.querySelector(".navgn_panel").style.width="20%";    
         
-    document.querySelector(".gear_logo").style.visibility="visible";
+        else if (navgn_scroll<=100 && navgn_scroll>20) document.querySelector(".navgn_panel").style.width=`${navgn_scroll}%`;
+        
+        else if(navgn_scroll>100) document.querySelector(".navgn_panel").style.width="100%";
+    }
+    
     document.querySelector(".main_body_div").style.visibility="visible";
 }
