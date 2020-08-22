@@ -18,26 +18,13 @@
     <script src="animatn.js"></script>
     <link rel="stylesheet" type="text/css" href="index_styling.css"/>
     
+    <!-- <script src="https://kit.fontawesome.com/1916bd107f.js" crossorigin="anonymous"></script> -->
 
     <style type="text/css">
     </style>
 
     <script type="text/javascript">
 
-        var flag=0
-        function scroll_to()
-        {
-            if(flag==0 && scrollY<=400)
-            {
-                flag_sc=1;
-                window.scrollTo( 0,400);
-            }
-            else
-            {
-                flag_sc=0;
-                window.scrollTo( 0,0);
-            }
-        }
 
     </script>
 </head>
@@ -46,6 +33,9 @@
 <body onload="fx_body_load()">
     
 <div class="main_body_div main_body_div_desktop main_body_div_mobile">
+
+    <div class="expand_button"><a href="#" title="Expand navigation panel" onclick="scroll_to()"><h2>></h2></a></div>
+
           
     <div id="divn" class="main_menu menu2"></div>
     
@@ -57,8 +47,8 @@
             <img class="gear2 gear2_m gear2_d" src="gear2.png"></img>
             
             <div class="brand brand_d brand_m">
-                <b1 style="background-color: yellow;">Custom </b1> 
-                <b2 style="background-color:lightblue;">&nbsp;Culture</b2>
+                <b1 style="background-color: yellow;">&nbsp;Custom </b1> 
+                <b2 style="background-color:lightblue;">&nbsp;Culture&nbsp;</b2>
             </div>
 
         </div>
@@ -66,7 +56,7 @@
     </div>
 
     <div class="navgn_panel navgn_panel_d navgn_panel_m">
-        <button style="position: static;" onclick="scroll_to()">Click</button>
+       
     </div>
     
     <!-- <div style="position: sticky; top:10px;">
