@@ -51,6 +51,7 @@ div.gear_logo
     -webkit-box-flex: 1;
     -moz-box-align: center  ;
     -webkit-box-align: center;
+    
     /* background-color: brown; */
     z-index: 10;
     text-align: left;
@@ -70,9 +71,9 @@ div.gear_logo > .brand
         height: 2000px;
     }
     
-    div.master_class_logo_d
+    div.master_class_logo
     {
-        height:350px;
+        height:300px;
     }
     
     div.gear_logo > .gear1_d
@@ -103,9 +104,9 @@ div.gear_logo > .brand
         height: 1000px;
     }
 
-    div.master_class_logo_m
+    div.master_class_logo
     {
-        height:250px;
+        height:200px;
     }
     
     div.gear_logo > .gear1_m
@@ -116,17 +117,17 @@ div.gear_logo > .brand
 
     div.gear_logo > .gear2_m
     {
-        height:20px;
-        width:20px;
+        height:60px;
+        width:60px;
         position: absolute;
-        left: 85px;
+        left: 93px;
         top:1px;
         transform: rotate(0deg);
     }
 
     div.gear_logo > .brand_m
     {
-        margin-left:5px;
+        margin-left:58px;
     }
 }
 
